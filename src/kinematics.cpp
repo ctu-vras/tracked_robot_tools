@@ -29,3 +29,13 @@ void Kinematics2D::setSteeringEfficiency(double steeringEfficiency)
 {
   this->steeringEfficiency = steeringEfficiency;
 }
+
+double Kinematics2D::getTracksDistance() const
+{
+  return this->tracksDistance;
+}
+
+double Kinematics2D::getSteeringEfficiency() const
+{
+  return this->steeringEfficiency;
+}

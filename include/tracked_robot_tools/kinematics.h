@@ -56,6 +56,18 @@ public:
    * \return The maximum angular speed.
    */
   double getMaxAngularSpeed(double maxTrackSpeed) const;
+  
+  /**
+   * \brief Return the tracks distance used by the model.
+   * \return The tracks distance.
+   */
+  double getTracksDistance() const;
+  
+  /**
+   * \brief Return the steering efficiency used by the model.
+   * \return The steering efficiency.
+   */
+  double getSteeringEfficiency() const;
 };
 
 }

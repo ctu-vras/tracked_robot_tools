@@ -1,9 +1,9 @@
 # find SWIG and Python
 find_package(SWIG 3.0.8 REQUIRED)
-if (${CMAKE_VERSION} VERSION_GREATER "3.13")
+if ("${CMAKE_VERSION}" VERSION_GREATER "3.13")
   cmake_policy(SET CMP0078 OLD)  # use the legacy swig target names
 endif()
-if (${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.12")
+if ("${CMAKE_VERSION}" VERSION_GREATER_EQUAL "3.12")
   cmake_policy(SET CMP0086 OLD)
 endif()
 

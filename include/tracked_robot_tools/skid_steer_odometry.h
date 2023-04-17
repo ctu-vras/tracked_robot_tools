@@ -59,6 +59,8 @@ protected:
   void addMeasurementRungeKutta1(double vl, double vr, const ros::Duration& dt, const cras::optional<double>& yawRate);
   void addMeasurementRungeKutta4(double vl, double vr, const ros::Duration& dt, const cras::optional<double>& yawRate);
   
+  cras::LogHelperPtr getCrasLogger();
+  
   IntegrateMeasurementFn integrateMeasurement;
   std::string integrationMethodName {"Euler"};
   

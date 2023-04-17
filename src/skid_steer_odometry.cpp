@@ -516,10 +516,10 @@ void SkidSteerOdometry::setIntegrationMethod(const std::string& method)
     this->integrateMeasurement = cras::bind_front(&SkidSteerOdometry::addMeasurementEuler, this);
     this->integrationMethodName = "Euler";
     if (method != this->integrationMethodName)
-      this->log->logWarn("Unknown integration method %s. Using %s instead.",
+      CRAS_WARN("Unknown integration method %s. Using %s instead.",
         method.c_str(), this->integrationMethodName.c_str());
   }
-  this->log->logInfo("Using %s measurement integration method.", this->integrationMethodName.c_str());
+  CRAS_INFO("Using %s measurement integration method.", this->integrationMethodName.c_str());
 }
 
 void SkidSteerOdometry::reset()
@@ -548,6 +548,11 @@ void SkidSteerOdometry::setVelocityScale(double left, double right)
 {
   this->velocityScaleLeft = left;
   this->velocityScaleRight = right;
+}
+
+cras::LogHelperPtr SkidSteerOdometry::getCrasLogger()
+{
+  return this->log;
 }
 
 }

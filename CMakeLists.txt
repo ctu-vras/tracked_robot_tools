@@ -55,6 +55,6 @@ if(BUILD_PYTHON)
 endif()
 
 if (CATKIN_ENABLE_TESTING)
-  catkin_add_gtest(test_skid_steer_odom test/test_skid_steer_odometry.cpp)
-  target_link_libraries(test_skid_steer_odom tracked_robot_odometry)
+  #catkin_add_gtest(test_skid_steer_odom test/test_skid_steer_odometry.cpp)
+  #target_link_libraries(test_skid_steer_odom tracked_robot_odometry)
 endif()

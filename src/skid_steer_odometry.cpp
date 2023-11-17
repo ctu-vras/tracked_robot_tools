@@ -101,8 +101,8 @@ void SkidSteerOdometry::addMeasurementEuler(double vl, double vr, const ros::Dur
   rot.z = std::sin(this->yaw / 2.0);
   rot.w = std::cos(this->yaw / 2.0);
   
-  this->odom.twist.twist.linear.x = vx;
-  this->odom.twist.twist.linear.y = vy;
+  this->odom.twist.twist.linear.x = v;
+  this->odom.twist.twist.linear.y = 0;
   this->odom.twist.twist.angular.z = w;
 
   auto& cov_w = this->odom.twist.covariance;
@@ -324,8 +324,8 @@ void SkidSteerOdometry::addMeasurementChongKleeman(double vl, double vr, const r
   rot.z = std::sin(this->yaw / 2.0);
   rot.w = std::cos(this->yaw / 2.0);
   
-  this->odom.twist.twist.linear.x = vx;
-  this->odom.twist.twist.linear.y = vy;
+  this->odom.twist.twist.linear.x = v;
+  this->odom.twist.twist.linear.y = 0;
   this->odom.twist.twist.angular.z = w;
   
   auto& cov_w = this->odom.twist.covariance;
@@ -412,8 +412,8 @@ void SkidSteerOdometry::addMeasurementRungeKutta1(double vl, double vr, const ro
   rot.z = std::sin(this->yaw / 2.0);
   rot.w = std::cos(this->yaw / 2.0);
   
-  this->odom.twist.twist.linear.x = vx;
-  this->odom.twist.twist.linear.y = vy;
+  this->odom.twist.twist.linear.x = v;
+  this->odom.twist.twist.linear.y = 0;
   this->odom.twist.twist.angular.z = w;
 
   auto& cov_w = this->odom.twist.covariance;
@@ -487,8 +487,8 @@ void SkidSteerOdometry::addMeasurementRungeKutta4(double vl, double vr, const ro
   rot.z = std::sin(this->yaw / 2.0);
   rot.w = std::cos(this->yaw / 2.0);
   
-  this->odom.twist.twist.linear.x = vx;
-  this->odom.twist.twist.linear.y = vy;
+  this->odom.twist.twist.linear.x = v;
+  this->odom.twist.twist.linear.y = 0;
   this->odom.twist.twist.angular.z = w;
 }
 

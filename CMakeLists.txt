@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.10.2)
 project(tracked_robot_tools)
 
+set(CMAKE_CXX_STANDARD 17)
+
 option(BUILD_PYTHON "Build Python SWIG module" ON)
 set(PYTHON_VERSION $ENV{ROS_PYTHON_VERSION} CACHE STRING "Version of Python libraries to search for")
 
